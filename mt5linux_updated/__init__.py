@@ -1,7 +1,8 @@
 # import datetime
 
 import rpyc
-from numpy import array
+
+# from numpy import array
 
 
 class MetaTrader5(object):
