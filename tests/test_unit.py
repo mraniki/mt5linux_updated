@@ -3,8 +3,32 @@ mt5linux Unit Testing
 """
 
 import pytest
+import rpyc
 
 from mt5linux_updated import MetaTrader5
+
+
+class MockMetaTrader5Service(rpyc.Service):
+    def exposed_terminal_info(self):
+        # Return some mock terminal info
+        return {"mock_info": "Mock terminal info"}
+
+    def exposed_initialize(self):
+        # Mock initialization
+        pass
+
+    def exposed_shutdown(self):
+        # Mock shutdown
+        pass
+
+
+def start_mock_server():
+    server = rpyc.ThreadedServer(MockMetaTrader5Service, port=1235)
+    server.start()
+
+
+def pytest_sessionstart(session):
+    start_mock_server()
 
 
 @pytest.fixture
