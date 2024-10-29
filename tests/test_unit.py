@@ -1,12 +1,7 @@
-"""
-mt5linux Unit Testing
-"""
-
 import pytest
 import rpyc
 
 from mt5linux_updated import MetaTrader5
-
 
 class MockMetaTrader5Service(rpyc.Service):
     def exposed_terminal_info(self):
@@ -21,15 +16,13 @@ class MockMetaTrader5Service(rpyc.Service):
         # Mock shutdown
         pass
 
-
 def start_mock_server():
     server = rpyc.ThreadedServer(MockMetaTrader5Service, port=1235)
     server.start()
 
-
-def pytest_sessionstart(session):
+@pytest.fixture(scope="session", autouse=True)
+def start_server():
     start_mock_server()
-
 
 @pytest.fixture
 def mt5():
@@ -38,7 +31,6 @@ def mt5():
     yield mt5
     mt5.shutdown()
 
-
 def test_terminal_info(mt5):
     info = mt5.terminal_info()
-    assert info is not None
+    assert info == {"mock_info": "Mock terminal info"}
