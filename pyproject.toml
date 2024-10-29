@@ -4,29 +4,32 @@ build-backend = "poetry.core.masonry.api"
 
 
 [tool.poetry]
-name = "name"
-version = "0.0.0"
-description = "A python library."
-authors = ["mraniki <8766259+mraniki@users.noreply.github.com>"]
+name = "mt5linux_updated"
+version = "0.3.0"
+description = "MetaTrader5 for linux users updated to lasted libraries"
+authors = ["Lucas Prett Campagna","mraniki <8766259+mraniki@users.noreply.github.com>"]
 license = "MIT License"
 readme = "README.md"
-keywords = ["template"]
+keywords = ["MetaTrader","Metatrader5"]
 packages = [
-    {include = "xxxxxxx"}
+    {include = "mt5linux_updated"}
 ]
 
 
 [tool.poetry.urls]
-"Changelog" =  "https://github.com/mraniki/xxxxxx/blob/dev/CHANGELOG.rst"
-"Support" =  "https://github.com/mraniki/xxxxx/discussions"
-"Issues" =  "https://github.com/mraniki/xxxxx/issues"
+"Changelog" =  "https://github.com/mraniki/mt5linux_updated/blob/dev/CHANGELOG.rst"
+"Support" =  "https://github.com/mraniki/mt5linux_updated/discussions"
+"Issues" =  "https://github.com/mraniki/mt5linux_updated/issues"
 
 
 [tool.poetry.dependencies]
 python = "^3.10"
 dynaconf = "^3.1.12"
 loguru = "^0.7.0"
-
+numpy= "2.1.2"
+plumbum= "1.9.0"
+pyparsing= "3.2.0"
+rpyc = "6.0.1"
 
 
 [tool.poetry.group.dev.dependencies]

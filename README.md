@@ -20,8 +20,8 @@
    <a href="https://codecov.io/gh/mraniki/xxxxxxx"> <img src="https://codecov.io/gh/mraniki/iamlistening/branch/main/graph/badge.svg?token=xxxxxxx"/></a><br>
     </td>
     <td align="left"> 
-      xxxxxxx<br>
-       xxxxxxx.
+      Updated version of https://github.com/lucas-campagna/mt5linux<br>
+      
     </td>
      
   </tr>
@@ -30,8 +30,7 @@
 <h5>How to use it</h5>
 <pre>
 <code>
-    xxxxxxxxxxxxxxxxxxxxx
-    xxxxxxxxxxxxxx
+    Refer to https://github.com/lucas-campagna/mt5linux
 </code>
 </pre>
 
