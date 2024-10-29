@@ -54,7 +54,7 @@ select = [
   "W"
 ]
 
-#ignore = ["E401","F401","F811"]
+ignore = ["E501"]
 fixable = ["ALL"]
 
 [tool.ruff.format]
