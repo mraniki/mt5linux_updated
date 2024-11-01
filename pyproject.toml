@@ -5,7 +5,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "mt5linux_updated"
-version = "0.0.0"
+version = "0.0.1"
 description = "MetaTrader5 for linux users updated to lasted libraries"
 authors = ["Lucas Prett Campagna","mraniki <8766259+mraniki@users.noreply.github.com>"]
 license = "MIT License"
